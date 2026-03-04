@@ -1,4 +1,3 @@
-// /composables/calculateComposable.js
 import { ref } from 'vue'
 
 export function useCalculate() {
@@ -23,7 +22,7 @@ export function useCalculate() {
     tipValue.value = (billValue * tipPercent) / 100
     total.value = billValue + tipValue.value
     perPerson.value = total.value / peopleCount
-    message.value = 'Cálculo realizado com sucesso ✅'
+    message.value = 'Cálculo realizado com sucesso'
   }
 
   return {
