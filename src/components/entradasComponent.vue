@@ -31,7 +31,7 @@ const emit = defineEmits(['calculate', 'update:bill', 'update:tip', 'update:peop
 }
 
 .input {
-  width: 100%;
+    width: 100%;
   padding: 15px;
   border: 1px solid #d1d5db;
   background-color: #ffffff;
@@ -39,11 +39,18 @@ const emit = defineEmits(['calculate', 'update:bill', 'update:tip', 'update:peop
   color: #111827;
   outline: none;
   border-radius: 20px;
+
+  transition: all 0.25s ease;
 }
 
-input:focus {
+.input:focus {
   border-color: #2563eb;
-  box-shadow: 0 0 0 1px #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  transform: scale(1.02);
+}
+.large-btn {
+  width: 100%;
+  padding: 14px;
 }
 
 .large-btn {
@@ -61,7 +68,7 @@ input:focus {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.large-btn:hover {
+.large-btn:active {
   color: #ffffff;
   background-color: #1d4ed8;
   border-color: #1d4ed8;
@@ -84,5 +91,32 @@ input:focus {
 .large-btn:hover::before {
   width: 100%; 
   opacity: 1;
+}
+
+@media (max-width: 480px) {
+
+  .title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .layout {
+    max-width: 100%;
+    padding: 14px;
+  }
+
+  .panel {
+    padding: 12px;
+  }
+
+  .input {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .large-btn {
+    padding: 12px;
+  }
+
 }
 </style>

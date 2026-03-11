@@ -19,8 +19,8 @@
 
 <script setup>
 import { ref } from 'vue'
-import Entradas from './Components/Entradas.vue'
-import Resultados from './Components/Resultados.vue'
+import Entradas from './components/entradasComponent.vue'
+import Resultados from './components/resultadosComponent.vue'
 import { useCalculate } from './composables/calculateComposable'
 
 const bill = ref('')
@@ -40,7 +40,7 @@ const {
 .app {
     background-color: rgb(70, 70, 175);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,11 +52,30 @@ const {
     margin-bottom: 30px;
 }
 .layout {
-    background-color: antiquewhite;
-    width: 100%;
-    max-width: 420px;
-    min-height: 40vh;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    padding: 16px;
+      background-color: antiquewhite;
+  width: 100%;
+  max-width: 420px;
+  min-height: 40vh;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+
+  animation: fadeUp 0.6s ease;
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
