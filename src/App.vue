@@ -19,9 +19,9 @@
 
 <script setup>
 import { ref } from 'vue'
-import Entradas from './components/entradasComponent.vue'
-import Resultados from './components/resultadosComponent.vue'
-import { useCalculate } from './composables/calculateComposable'
+import Entradas from './components/EntradaComponent.vue'
+import Resultados from './components/ResultadosComponent.vue'
+import { useCalculate } from './composables/useCalculate.js'
 
 const bill = ref('')
 const tip = ref('')
