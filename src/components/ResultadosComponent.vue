@@ -1,9 +1,9 @@
 <template>
   <div class="panel">
     <h2>Resultado</h2>
-    <div class="result">Total: {{ total }}</div>
-    <div class="result">Gorjeta: {{ tipValue }}</div>
-    <div class="result">Por pessoa: {{ perPerson }}</div>
+   <div class="result">Total: {{ total?.toFixed(2) }}</div>
+<div class="result">Gorjeta: {{ tipValue?.toFixed(2) }}</div>
+<div class="result">Por pessoa: {{ perPerson?.toFixed(2) }}</div>
     <div class="result">{{ message }}</div>
   </div>
 </template>
